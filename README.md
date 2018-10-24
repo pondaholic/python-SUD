@@ -13,6 +13,7 @@ Based on the classic 1969 scifi novel, *The Left Hand of Darkness* written by th
 
 #### Levels
 (If you want to be hardcore, you can skip this section. Next comes "Game Details")
+
 **Level 1**
 You awake and see a cryptic message left for you. You must decifer it to find the key that will allow you to escape your cell.  Once out, you must find your way out of the maze of the cell block you are relegated to without bumping into any sentries.  Take too long to decifer the message and be in danger of recieving your next scheduled drug dosage. Find the key too late, and risk a guard seeing you try to escape your cell.
 
