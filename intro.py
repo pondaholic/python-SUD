@@ -16,13 +16,13 @@ print()
 def begin():
     verbs = ['get up', 'rise']
 
-    if any(word in action for word in verbs):
+    if any(word in action.lower() for word in verbs):
         print('It is very hard, but you somehow manage to move your limbs to stand up. You notice the edges of your vision vingette slightly.')
 
-    if action == 'wake up':
+    elif action.lower() == 'wake up':
         print("You're groggy but awake.")
 
-    if action == 'get out':
+    elif action.lower() == 'get out':
         print('(Out of cot)')
         print('It is very hard, but you somehow manage to move your limbs to stand up. You notice the edges of your vision vingette slightly.')
 
@@ -46,7 +46,28 @@ while True:
     begin()
 
     # search = ['look around', 'walk around', 'search']
-    if 'look around' in action:
+    if 'look around' in action.lower():
         discover()
-    if 'walk around' in action:
+    elif 'walk around' in action.lower():
         pain()
+    # else:
+    #     print('You want to WHAT?!')
+
+        move = input('>')
+
+        move = move.lower()
+        action_word = ['go', 'move']
+
+        if any(word in move for word in action_word):
+            if 'table' in move:
+                print(
+                    "You find a message carved into the table that wasn't there before:")
+                print()
+                print('"Look no further')
+                print('under your very eyes')
+                print('the stars will tell you')
+                print('table all your fears')
+                print()
+                print("It's the fear in your soul")
+                print('there no life, no destiny; only death!"')
+                print()
