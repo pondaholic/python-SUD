@@ -82,7 +82,7 @@ def escape_cell():
         if 'table' in move:
             key_riddle()
 
-    search = input('>')
+    search = input('3.1>')
     search = search.lower()
     if any(word in search for word in search_word):
         if 'under' in search:
@@ -90,7 +90,7 @@ def escape_cell():
                 print(
                     'Under the table, you find a skeleton key wedged into a crack between two boards. It mocks you.')
 
-    get = input('>')
+    get = input('3.2>')
     get = get.lower()
 
     if 'get' in get:
@@ -104,7 +104,7 @@ def escape_cell():
             print('\t Your Inventory')
             inventory.print_items()
 
-            escape = input('>')
+            escape = input('3.3>')
             escape = escape.lower()
 
             if any(word in escape for word in leave):
@@ -123,7 +123,7 @@ def hall_dungeon():
     print('To your West is another Prisoner\'s Cell.')
     print('To your East is a bare wall with single, giant gash.')
 
-    direction = input('>')
+    direction = input('4.1>')
     move_through_hall = ['go', 'move']
     if any(word in direction.lower() for word in move_through_hall):
         if 'south' in direction:
@@ -135,7 +135,7 @@ def hall_dungeon():
         if 'west' in direction:
             print('You look into your neighbor\'s cell. He sees you looking in and screams. Sentries storm the hall and fire a tranquilizer shot into your arm. The dosage is too much for your physiology and you fall into an unwakeable coma.')
 
-            input('>')
+            input('4.2>')
             print(
                 'Sweet dreams. You\'ll be here forever because you were curious about who was in the box closest to your\'s. Good job.')
             print('What will you do now?')
@@ -156,25 +156,25 @@ search_word = ['go', 'move', 'look', 'walk']
 leave = ['get out', 'leave', 'open']
 
 while True:
-    action = input('>')
+    action = input('1>')
     begin()
 
-    look = input('>')
+    look = input('2>')
     if any(word in look.lower() for word in movement):
         discover()
 
-        move = input('>')
+        move = input('3>')
         move = move.lower()
         if 'table' in move:
             escape_cell()
 
-            hallway = input('>')
+            hallway = input('4>')
             hallway.lower()
             if any(word in hallway for word in search_word):
                 if 'hall' in hallway:
                     hall_dungeon()
 
-                    decision = input('>')
+                    decision = input('5>')
                     decision = decision.lower()
                     if 'go' in decision:
                         if 'east' in decision:
